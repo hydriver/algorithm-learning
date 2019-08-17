@@ -1,3 +1,4 @@
 # introduction of the repository
 * git learning
-* algorithmn learning
+* algorithm learning
+* github learning
