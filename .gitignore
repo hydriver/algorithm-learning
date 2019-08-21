@@ -1,5 +1,5 @@
 *.iml
 out
-algorithm4
 .idea
 src/edu2
+algorithm4/algs4-data
