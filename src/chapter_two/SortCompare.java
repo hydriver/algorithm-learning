@@ -27,9 +27,12 @@ public class SortCompare {
     public static void main(String[] args) {
         int N = Integer.parseInt(args[0]);
         int T = Integer.parseInt(args[1]);
-        double t1 = timeRandomInput(Insertion::sort, N, T);
-        double t2 = timeRandomInput(a -> Selection.sort(a), N, T);
+//        double t1 = timeRandomInput(Insertion::sort, N, T);
+//        double t2 = timeRandomInput(a -> Selection.sort(a), N, T);
+        double t2 = timeRandomInput(Shell::sort, N, T);
+//        double t1 = timeRandomInput(Insertion::sort, N, T);
         StdOut.printf("For %d random Doubles\n", N);
-        StdOut.printf("t1 / t2 = %.1f", t1 / t2);
+//        StdOut.printf("t1 / t2 = %.1f", t1 / t2);
+        StdOut.printf("t2 = %.1f", t2 / 100);
     }
 }
