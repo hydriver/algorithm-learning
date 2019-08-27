@@ -46,14 +46,14 @@ public class WeightedQuickUnionUF {
 //            front = id[p];
 //        }
         // 压缩路径
-        int current = p;
-        while (current != id[current]) {
-            int front = id[current];
-            if (id[current] != pRoot) {
-                id[current] = pRoot;
-            }
-            current = front;
-        }
+//        int current = p;
+//        while (current != id[current]) {
+//            int front = id[current];
+//            if (id[current] != pRoot) {
+//                id[current] = pRoot;
+//            }
+//            current = front;
+//        }
         return pRoot;
     }
 

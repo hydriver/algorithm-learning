@@ -2,7 +2,7 @@ package chapter_one;
 
 import edu.princeton.cs.algs4.StdOut;
 
-public class Date {
+public class Date implements Comparable<Date> {
     /**
      * 实现日期
      */
@@ -49,11 +49,35 @@ public class Date {
         return true;
     }
 
+    @Override
+    public int compareTo(Date that) {
+        if (this.year > that.year) {
+            return 1;
+        }
+        if (this.year < that.year) {
+            return -1;
+        }
+        if (this.month > that.month) {
+            return 1;
+        }
+        if (this.month < that.month) {
+            return -1;
+        }
+        if (this.day > that.day) {
+            return 1;
+        }
+        if (this.day < that.day) {
+            return -1;
+        }
+        return 0;
+    }
+
     public static void main(String[] args) {
         Date one = new Date(8, 13, 2018);
         Date another = new Date(8, 13, 2019);
         StdOut.println(one == another);
         StdOut.println(one.equals(another));
         StdOut.println(another.year);
+        StdOut.println(one.compareTo(another));
     }
 }
